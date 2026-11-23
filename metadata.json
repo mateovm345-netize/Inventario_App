@@ -1,0 +1,6 @@
+{
+  "name": "InventarioApp",
+  "description": "Aplicación Android de inventario con Jetpack Compose, MVVM, Room, Hilt, Navigation 3 y sincronización con Firebase Firestore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

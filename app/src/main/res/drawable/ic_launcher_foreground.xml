@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Box body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,42 L76,42 L76,72 C76,74.2 74.2,76 72,76 L36,76 C33.8,76 32,74.2 32,72 Z" />
+    <!-- Box top lid -->
+    <path
+        android:fillColor="#A7F3D0"
+        android:pathData="M29,32 L79,32 C80.7,32 82,33.3 82,35 L82,40 C82,41.7 80.7,43 79,43 L29,43 C27.3,43 26,41.7 26,40 L26,35 C26,33.3 27.3,32 29,32 Z" />
+    <!-- Inventory checkmark -->
+    <path
+        android:fillColor="#0B463F"
+        android:pathData="M41,59 L44.5,55.5 L51,62 L63.5,48.5 L67,52 L51,69 Z" />
+</vector>

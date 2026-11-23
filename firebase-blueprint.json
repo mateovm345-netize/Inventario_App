@@ -1,0 +1,57 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Producto del inventario sincronizado por usuario.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identificador UUID del producto, igual al document ID."
+        },
+        "name": {
+          "type": "string",
+          "description": "Nombre del producto (1 a 80 caracteres)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Descripción del producto (máximo 500 caracteres)."
+        },
+        "priceCop": {
+          "type": "integer",
+          "description": "Precio unitario en pesos colombianos (> 0)."
+        },
+        "quantity": {
+          "type": "integer",
+          "description": "Cantidad disponible en inventario (>= 0)."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Marca de tiempo del servidor asignada mediante FieldValue.serverTimestamp()."
+        },
+        "isDeleted": {
+          "type": "boolean",
+          "description": "Marca lógica de eliminación (tombstone) para sincronización."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "priceCop",
+        "quantity",
+        "updatedAt",
+        "isDeleted"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{uid}/products/{productId}": {
+      "schema": {
+        "$ref": "#/entities/Product"
+      },
+      "description": "Subcolección privada de productos de inventario pertenecientes a cada usuario autenticado."
+    }
+  }
+}
